@@ -2,10 +2,11 @@
 <h2>Soal 1</h2>
 Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
 
-<img src="img/img1.png">
+<center><img src="img/img1.png"></center>
 
 Output yang diminta (Gantilah Fulan dengan nama Anda):
-<img src="img/img2.png">
+<br>
+<center><img src="img/img2.png"></center>
 
 <b>Jawab :</b>
 <center><img src="img/img3.png"></center>

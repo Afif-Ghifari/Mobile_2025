@@ -1,0 +1,25 @@
+void main() {
+  String nama = "Muhammad Afif Al Ghifari";
+  String nim = "2341720168";
+  bool isPrima = false;
+
+  for (int i = 0; i <= 201; i++) {
+    if (i < 2) {
+      isPrima = false;
+      continue;
+    }
+    for (int j = 2; j <= i ~/ 2; j++) {
+      if (i % j == 0) {
+        isPrima = false;
+        continue;
+      } else {
+        isPrima = true;
+      }
+    }
+    if (isPrima) {
+      print("Bilangan Prima: $i");
+      print("Nama: $nama");
+      print("NIM : $nim\n");
+    }
+  }
+}
