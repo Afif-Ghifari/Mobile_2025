@@ -1,9 +1,11 @@
 <h1>Praktikum</h1>
+
 | Nama:   | Muhammad Afif Al Ghifari |
 |---------|--------------------------|
 | Kelas:  | TI-3H                    |
 | NIM:    | 2341720168               |
 |         |                          |
+
 <h2>Praktikum 1: Menerapkan Control Flows ("if/else")</h2>
 
 <h3>Langkah 1</h3>
