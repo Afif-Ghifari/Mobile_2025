@@ -30,6 +30,10 @@ Jawab:<br>
 1. Melanjutkan dari praktikum 1, Anda diminta untuk menjalankan aplikasi ke perangkat fisik (device Android atau iOS). Silakan ikuti langkah-langkah pada codelab tautan berikut ini.
 
     https://developer.android.com/codelabs/basic-android-kotlin-compose-connect-device?hl=id#0
+    <br>
+Jawab:<br>
+<img src="img/prak2-1.png">
+<img src="img/prak2-2.jpeg">
 
 <h2>Praktikum 3: Membuat Repository GitHub dan Laporan Praktikum</h2>
 
