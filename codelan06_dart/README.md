@@ -18,7 +18,7 @@ Widget titleSection = Container(
         child: Column(
           crossAxisAlignment: ...,
           children: [
-            /* soal 2*/
+            /* soal f2*/
             Container(
               padding: const EdgeInsets.only(bottom: ...),
               child: const Text(
