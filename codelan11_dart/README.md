@@ -53,9 +53,13 @@ getNumber() dipanggil membuat Completer dan menjalankan calculate(). Setelah 5 d
 ### Soal 6
 - Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!<br>
 Jawab:<br>
-
+- Langkah 2: calculate() tidak punya penanganan error. Jika sesuatu gagal sebelum complete(42) terpanggil, completer.future bisa menggantung (tidak pernah selesai dan tidak pernah error).
+- Langkah 5–6: calculate() dibungkus try/catch, sehingga future selalu berakhir:
+    - sukses → complete(42)
+    - gagal → completeError(...) Lalu pemanggilnya (getNumber().then(...).catchError(...)) menangani hasil dan error secara eksplisit di UI.
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 6".
+<img src="img/prak3-6b.gif">
 
 ## Praktikum 4
 
