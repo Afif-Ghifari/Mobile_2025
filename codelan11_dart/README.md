@@ -43,10 +43,18 @@ count() Memanggil ketiga fungsi tadi secara berurutan dengan await, menjumlahkan
 
 ### Soal 5
 - Jelaskan maksud kode langkah 2 tersebut!
+<br>
+Jawab:<br>
+getNumber() dipanggil membuat Completer dan menjalankan calculate(). Setelah 5 detik di calculate(), completer.complete(42) menandakan Future selesai. Nilai 42 dikirim ke semua yang sedang await getNumber().
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 5".
+<img src="img/prak3-5b.gif">
 
 ### Soal 6
-- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!<br>
+Jawab:<br>
+
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 6".
 
 ## Praktikum 4
