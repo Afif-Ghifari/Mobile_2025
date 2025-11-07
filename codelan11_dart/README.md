@@ -114,8 +114,12 @@ Jawab:<br>
 - Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
 
 ### Soal 14
-- Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+- Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?<br>
+Jawab:<br>
+    Ada perubahan dimana saat terjadi error maka akan memunculkan teks'Something terrible happened!'.
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
+<img src="img/prak7-14b.gif">
 
 ## Praktikum 8
 
