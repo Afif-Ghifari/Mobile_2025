@@ -68,10 +68,9 @@ Jawab:<br>
 <img src="img/prak4-7.gif">
 
 ### Soal 8
-Jelaskan maksud perbedaan kode langkah 1 dan 4!<br>
+- Jelaskan maksud perbedaan kode langkah 1 dan 4!<br>
 Jawab:<br>
     - Gunakan Future.wait kalau semua proses sudah diketahui di awal (kasus kamu: returnOneAsync, returnTwoAsync, returnThreeAsync).
-
     - Gunakan FutureGroup kalau kamu perlu menambah Future secara dinamis sebelum semuanya dijalankan bersama.
 
 ## Praktikum 5
@@ -83,17 +82,24 @@ Jawab:<br>
 ### Soal 10
 - Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!<br>
 Jawab:<br>
+    Dari sisi tampilan interface tidak ada perubahan.
+        
+    - Future returnError() menyimulasikan error asynchronous.Setelah menunggu 2 detik, ia melempar (throw) sebuah Exception dengan pesan: "Something terrible happened". Karena melempar exception, maka Future yang dihasilkan akan berstatus error / gagal.
+
+    - Future handleError() memanggil returnError() dan menangani error-nya agar aplikasi tidak crash.
 
 
 ## Praktikum 6
 
 ### Soal 11
 - Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+<img src="img/prak6-11.png">
 
 ### Soal 12
 - Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
 - Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
+<img src="img/prak6-12.gif">
 
 ## Praktikum 7
 
@@ -119,7 +125,7 @@ Jawab:<br>
 
 ## Praktikum 9
 
-### Soal 16
+### Soal 17
 - Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
 - Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".
