@@ -65,9 +65,12 @@ Jawab:<br>
 
 ### Soal 7
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 7".
+<img src="img/prak4-7.gif">
 
 ### Soal 8
-- Jelaskan maksud perbedaan kode langkah 1 dan 4!
+- Jelaskan maksud perbedaan kode langkah 1 dan 4!<br>
+Jawab:<br>
+
 
 ## Praktikum 5
 
