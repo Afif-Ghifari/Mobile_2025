@@ -20,14 +20,24 @@
 <img src="img/prak1-2b.png">
 
 ### Soal 3
-- Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
+- Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!<br>
+Jawab:<br>
+Substring Memotong teks hasil response agar hanya menampilkan 450 karakter pertama. catchError Menangani error dari Future (misalnya HTTP gagal) dan menampilkan pesan error di UI
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 3".
+<img src="img/prak1-3b.gif">
 
 ## Praktikum 2
 
 ### Soal 4
-- Jelaskan maksud kode langkah 1 dan 2 tersebut!
+- Jelaskan maksud kode langkah 1 dan 2 tersebut!<br>
+Jawab:<br>
+returnOneAsync(), returnTwoAsync(), returnThreeAsync() Masing-masing menunggu 3 detik (Future.delayed) lalu mengembalikan nilai 1, 2, dan 3.
+
+count() Memanggil ketiga fungsi tadi secara berurutan dengan await, menjumlahkan hasilnya ke variabel total, lalu menampilkan hasilnya ke layar lewat setState().
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 4".
+<img src="img/prak2-4b.gif">
 
 ## Praktikum 3
 
