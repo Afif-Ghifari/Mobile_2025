@@ -32,9 +32,9 @@ Substring Memotong teks hasil response agar hanya menampilkan 450 karakter perta
 ### Soal 4
 - Jelaskan maksud kode langkah 1 dan 2 tersebut!<br>
 Jawab:<br>
-returnOneAsync(), returnTwoAsync(), returnThreeAsync() Masing-masing menunggu 3 detik (Future.delayed) lalu mengembalikan nilai 1, 2, dan 3.
+    returnOneAsync(), returnTwoAsync(), returnThreeAsync() Masing-masing menunggu 3 detik (Future.delayed) lalu mengembalikan nilai 1, 2, dan 3.
 
-count() Memanggil ketiga fungsi tadi secara berurutan dengan await, menjumlahkan hasilnya ke variabel total, lalu menampilkan hasilnya ke layar lewat setState().
+    count() Memanggil ketiga fungsi tadi secara berurutan dengan await, menjumlahkan hasilnya ke variabel total, lalu menampilkan hasilnya ke layar lewat setState().
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 4".
 <img src="img/prak2-4b.gif">
@@ -45,7 +45,7 @@ count() Memanggil ketiga fungsi tadi secara berurutan dengan await, menjumlahkan
 - Jelaskan maksud kode langkah 2 tersebut!
 <br>
 Jawab:<br>
-getNumber() dipanggil membuat Completer dan menjalankan calculate(). Setelah 5 detik di calculate(), completer.complete(42) menandakan Future selesai. Nilai 42 dikirim ke semua yang sedang await getNumber().
+    getNumber() dipanggil membuat Completer dan menjalankan calculate(). Setelah 5 detik di calculate(), completer.complete(42) menandakan Future selesai. Nilai 42 dikirim ke semua yang sedang await getNumber().
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 5".
 <img src="img/prak3-5b.gif">
@@ -53,10 +53,10 @@ getNumber() dipanggil membuat Completer dan menjalankan calculate(). Setelah 5 d
 ### Soal 6
 - Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!<br>
 Jawab:<br>
-- Langkah 2: calculate() tidak punya penanganan error. Jika sesuatu gagal sebelum complete(42) terpanggil, completer.future bisa menggantung (tidak pernah selesai dan tidak pernah error).
-- Langkah 5–6: calculate() dibungkus try/catch, sehingga future selalu berakhir:
-    - sukses → complete(42)
-    - gagal → completeError(...) Lalu pemanggilnya (getNumber().then(...).catchError(...)) menangani hasil dan error secara eksplisit di UI.
+    - Langkah 2: calculate() tidak punya penanganan error. Jika sesuatu gagal sebelum complete(42) terpanggil, completer.future bisa menggantung (tidak pernah selesai dan tidak pernah error).
+    - Langkah 5–6: calculate() dibungkus try/catch, sehingga future selalu berakhir:
+        - sukses → complete(42)
+        - gagal → completeError(...) Lalu pemanggilnya (getNumber().then(...).catchError(...)) menangani hasil dan error secara eksplisit di UI.
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 6".
 <img src="img/prak3-6b.gif">
@@ -68,17 +68,22 @@ Jawab:<br>
 <img src="img/prak4-7.gif">
 
 ### Soal 8
-- Jelaskan maksud perbedaan kode langkah 1 dan 4!<br>
+Jelaskan maksud perbedaan kode langkah 1 dan 4!<br>
 Jawab:<br>
+    - Gunakan Future.wait kalau semua proses sudah diketahui di awal (kasus kamu: returnOneAsync, returnTwoAsync, returnThreeAsync).
 
+    - Gunakan FutureGroup kalau kamu perlu menambah Future secara dinamis sebelum semuanya dijalankan bersama.
 
 ## Praktikum 5
 
 ### Soal 9
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 9".
+<img src="img/prak5-9.gif">
 
 ### Soal 10
-- Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+- Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!<br>
+Jawab:<br>
+
 
 ## Praktikum 6
 

@@ -72,6 +72,11 @@ class _FuturePageState extends State<FuturePage> {
     }
   }
 
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened');
+  }
+
   void returnFG() {
     FutureGroup<int> futureGroup = FutureGroup<int>();
     futureGroup.add(returnOneAsync());
@@ -93,7 +98,6 @@ class _FuturePageState extends State<FuturePage> {
       returnThreeAsync(),
     ]);
   }
-
 
   Future count() async {
     int total = 0;
@@ -131,17 +135,19 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text('GO!'),
               onPressed: () {
-                // count();
-                // getNumber()
-                //     .then((value) {
-                //       setState(() {
-                //         result = value.toString();
-                //       });
-                //     })
-                //     .catchError((e) {
-                //       result = 'An error occurred';
-                //     });
-                returnFG();
+                // returnFG();
+                returnError()
+                    .then((value) {
+                      setState(() {
+                        result = 'Success';
+                      });
+                    })
+                    .catchError((onError) {
+                      setState(() {
+                        result = onError.toString();
+                      });
+                    })
+                    .whenComplete(() => print('Complete'));
               },
             ),
             const Spacer(),
