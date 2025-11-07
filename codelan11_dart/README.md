@@ -150,7 +150,23 @@ Jawab:<br>
 ## Praktikum 9
 
 ### Soal 17
-- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?<br>
+Jawab:<br>
+    - Ketika tombol "Change Color" ditekan, sebuah AlertDialog akan muncul di atas layar. Setelah pengguna memilih warna (misalnya Biru Pastel), dialog tersebut akan menutup dan warna latar belakang layar berubah menjadi Biru Pastel. Hal ini terjadi karena mekanisme pengelolaan state yang berbeda dari contoh sebelumnya:
+
+        - Dialog (AlertDialog) dan Layar (Scaffold) berada di dalam State yang sama, yaitu _NavigationDialogScreenState.
+
+        - Saat tombol warna seperti "Biru Pastel" ditekan, fungsi onPressed langsung mengubah nilai variabel color dalam State.
+
+        - Pemanggilan Navigator.pop(context) hanya berfungsi untuk menutup dialog.
+
+        - Karena method _showColorDialog menggunakan await showDialog, kode setelahnya baru berjalan setelah dialog ditutup.
+
+        - Akhirnya, setState(() {}) dijalankan untuk memperbarui tampilan UI, sehingga warna latar belakang berubah sesuai nilai color yang baru.
+
 - Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+<img src="img/prak9-17b.png">
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".
+<img src="img/prak9-17c.gif">
 
