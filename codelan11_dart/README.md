@@ -104,8 +104,13 @@ Jawab:<br>
 ## Praktikum 7
 
 ### Soal 13
-- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?<br>
+Jawab:<br>
+    animasi loading dan hasil lokasi diatur secara manual dengan setState(), sedangkan pada praktikum ini digunakan FutureBuilder yang secara otomatis merebuild UI berdasarkan status Future.
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+<img src="img/prak7-13b.gif">
+
 - Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
 
 ### Soal 14
