@@ -125,12 +125,27 @@ Jawab:<br>
 
 ### Soal 15
 - Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+<img src="img/prak8-15a.png">
+
 - Silakan ganti dengan warna tema favorit Anda.
+<img src="img/prak8-15b.png">
 
 ### Soal 16
-- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ??<br>
+Jawab:<br>
+    - Ketika tombol warna (misalnya “Red”) ditekan di Layar 2, layar tersebut tertutup, dan warna latar belakang di Layar 1 yang semula oranye berubah menjadi merah. Hal ini terjadi karena mekanisme Navigator push dan pop dengan data:
+
+        - Layar 1 (push): Memanggil await Navigator.push(...) untuk membuka Layar 2 dan menunggu hasil yang dikirim kembali.
+
+        - Layar 2 (pop): Memanggil Navigator.pop(context, Colors.red) untuk menutup diri sekaligus mengirim nilai warna merah ke Layar 1.
+
+        - Layar 1 (setState): Menerima nilai warna dari Layar 2, menyimpannya ke variabel color, kemudian memanggil setState() agar tampilan diperbarui sesuai warna baru.
+
 - Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+<img src="img/prak8-16b.png">
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".
+<img src="img/prak8-16c.gif">
 
 ## Praktikum 9
 
