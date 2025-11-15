@@ -123,7 +123,11 @@
 
 ### Soal 12
 - Jelaskan maksud kode pada langkah 3 dan 7 !
+    <br>Jawab:<br>
+    - Langkah 3: Stream diambil dari class NumberStream, di mana method getNumbers() menghasilkan angka acak setiap satu detik melalui Stream.periodic.
+    - Langkah 7: Widget StreamBuilder dipakai untuk membentuk tampilan UI berdasarkan data yang diterima dari stream. Setiap kali ada data baru, builder akan dijalankan kembali untuk menampilkan angka terbaru di layar.
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    <img src="img/prak6-12.gif">
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 12".
 
 ## Praktikum 7
