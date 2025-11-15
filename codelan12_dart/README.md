@@ -65,7 +65,16 @@
 
 ### Soal 7
 - Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+    <br>Jawab:<br>
+    - addError(),
+        Method ini menambahkan error ke stream menggunakan controller.sink.addError('error'). Tujuannya untuk mensimulasikan kondisi error dalam alur stream.
+    - onError di listen(),
+        Callback ini menangani error yang dikirim dari stream. Saat error terjadi, nilai lastNumber diubah menjadi -1 agar UI bisa menampilkan status error.
+    - addRandomNumber(),
+        Method ini mengirim angka acak ke stream dan juga memicu error dengan addError(). Ini menunjukkan bagaimana stream bisa menerima data dan error secara bersamaan.
+
 - Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
+    <img src="img/prak2-7b.png">
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 7".
 
 ## Praktikum 3

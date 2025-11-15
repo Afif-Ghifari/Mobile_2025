@@ -32,7 +32,11 @@ class NumberStream {
     controller.sink.add(number);
   }
 
-  close(){
+  close() {
     controller.close();
+  }
+
+  addError() {
+    controller.sink.addError("Error");
   }
 }
