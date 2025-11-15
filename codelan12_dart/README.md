@@ -134,5 +134,14 @@
 
 ### Soal 13
 - Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?
+    <br>Jawab:<br>
+    Praktikum ini memperkenalkan pola BLoC yang memisahkan logika bisnis dari tampilan dengan memanfaatkan Stream. Proses menghasilkan angka acak dipindahkan ke kelas RandomNumberBloc, yang menerima event (permintaan angka) dan mengirimkan state melalui stream. Sementara itu, UI (RandomScreen) hanya berlangganan pada stream lewat StreamBuilder dan menampilkan nilai yang diterima.
+    Penerapan konsep pola BLoC:
+    - Input (Sink): generateRandom menangkap event yang dikirim UI (misalnya saat tombol refresh ditekan).
+    - Business Logic: Di dalam constructor, listener memproses event tersebut dan menghasilkan angka acak.
+    - Output (Stream): randomNumber mengalirkan data menuju UI untuk ditampilkan oleh StreamBuilder.
+    - Separation of Concerns: Logika bisnis (pembuatan angka acak) dipisahkan sepenuhnya dari bagian UI.
+    
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    <img src="img/prak7-13.gif">
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 13".
