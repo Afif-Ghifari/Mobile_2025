@@ -34,6 +34,7 @@
 
 ### Soal 4
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    <img src="img/prak1-4.gif">
 - Lakukan commit hasil jawaban Soal 4 dengan pesan "W12: Jawaban Soal 4"
 
 ### Soal 5
