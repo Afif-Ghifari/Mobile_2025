@@ -17,6 +17,7 @@
 
 ### Soal 2
 - Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut.
+    <img src="img/prak1-2.png">
 - Lakukan commit hasil jawaban Soal 2 dengan pesan "W12: Jawaban Soal 2"
 
 ### Soal 3
