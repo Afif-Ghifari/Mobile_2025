@@ -108,10 +108,15 @@
 
 ### Soal 10
 - Jelaskan mengapa error itu bisa terjadi ?
+    <br>Jawab:<br>
+    Kesalahan ini muncul karena satu stream yang sama dipantau lebih dari sekali tanpa dijadikan broadcast. Secara bawaan, stream di Dart adalah single-subscription, sehingga hanya mengizinkan satu listener aktif pada suatu waktu.
 
 ### Soal 11
 - Jelaskan mengapa hal itu bisa terjadi ?
+    <br>Jawab:<br>
+    Situasi itu muncul karena stream yang dipakai merupakan broadcast stream, sehingga memungkinkan banyak subscriber menerima data yang sama secara bersamaan.
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    <img src="img/prak5-11.gif">
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 10,11".
 
 ## Praktikum 6
