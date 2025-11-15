@@ -39,6 +39,10 @@
 
 ### Soal 5
 - Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
+    <br>Jawab:<br>
+- await for untuk looping menunggu stream selesai
+- listen() untuk event listener yang berbunyi setiap ada event baru
+
 - Lakukan commit hasil jawaban Soal 5 dengan pesan "W12: Jawaban Soal 5"
 
 ## Praktikum 2
