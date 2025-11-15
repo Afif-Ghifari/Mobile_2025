@@ -40,8 +40,8 @@
 ### Soal 5
 - Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
     <br>Jawab:<br>
-- await for untuk looping menunggu stream selesai
-- listen() untuk event listener yang berbunyi setiap ada event baru
+    - await for untuk looping menunggu stream selesai
+    - listen() untuk event listener yang berbunyi setiap ada event baru
 
 - Lakukan commit hasil jawaban Soal 5 dengan pesan "W12: Jawaban Soal 5"
 
@@ -49,7 +49,18 @@
 
 ### Soal 6
 - Jelaskan maksud kode langkah 8 dan 10 tersebut!
+    <br>Jawab:<br>
+    - initState()
+        - Membuat stream
+        - Menghubungkan stream dengan listener
+        - Setiap ada angka baru pada stream maka UI update otomatis
+    - addRandomNumber()
+        - Membuat angka acak
+        - Mengirim angka ke stream
+        - Listener memproses event yang membuat UI berubah
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    <img src="img/prak2-6.gif">
+
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 6".
 
 ### Soal 7
