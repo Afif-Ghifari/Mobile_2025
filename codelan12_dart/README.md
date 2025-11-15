@@ -85,16 +85,23 @@
     - Langkah 1: Mendeklarasikan sebuah variabel untuk menyimpan StreamTransformer.
     - Langkah 2: Membuat transformer yang mengalikan semua data dengan 10, mengubah error menjadi angka -1, dan menutup sink saat stream selesai
     - Langkah 3: Menerapkan transformer pada stream, listener menerima data yang sudah dimodifikasi, listener update UI dengan setState, dan error yang lolos transformer ditangani dengan .onError()
-    
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. 
     <img src="img/prak3-8.gif">
+
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 8".
 
 ## Praktikum 4
 
 ### Soal 9
 - Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+    <br>Jawab:<br>
+    - Langkah 2: Variabel ini berfungsi menyimpan objek langganan (listener) dari sebuah stream. Tujuannya agar kita bisa mengelola dan menghentikan stream secara manual.
+    - Langkah 6: Tahap ini mengaktifkan pendengar pada stream. Setiap data yang diterima akan diproses dan diperbarui pada tampilan UI.
+    - Langkah 8: Perintah ini digunakan untuk menghentikan langganan pada stream. Setelah dijalankan, stream tidak lagi mengirimkan data ke listener. Biasanya dipakai saat tombol "Stop Subscription" ditekan.
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    <img src="img/prak4-9.gif">
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 9".
 
 ## Praktikum 5
