@@ -81,7 +81,13 @@
 
 ### Soal 8
 - Jelaskan maksud kode langkah 1-3 tersebut!
-- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    <br>Jawab:<br>
+    - Langkah 1: Mendeklarasikan sebuah variabel untuk menyimpan StreamTransformer.
+    - Langkah 2: Membuat transformer yang mengalikan semua data dengan 10, mengubah error menjadi angka -1, dan menutup sink saat stream selesai
+    - Langkah 3: Menerapkan transformer pada stream, listener menerima data yang sudah dimodifikasi, listener update UI dengan setState, dan error yang lolos transformer ditangani dengan .onError()
+    
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. 
+    <img src="img/prak3-8.gif">
 - Lalu lakukan commit dengan pesan "W12: Jawaban Soal 8".
 
 ## Praktikum 4
