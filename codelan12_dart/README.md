@@ -22,7 +22,14 @@
 
 ### Soal 3
 - Jelaskan fungsi keyword yield* pada kode tersebut!
+    <br>Jawab:<br>
+    yield* digunakan untuk "meneruskan" (delegate) data dari stream lain ke stream yang kita buat.
 - Apa maksud isi perintah kode tersebut?
+    <br>Jawab:<br>
+    - Menghasilkan nilai setiap 1 detik
+    - Mengambil warna dari list colors berdasarkan indeks yang terus bertambah
+    - Setelah indeks mencapai akhir list, akan kembali ke awal (modulus)
+    - Menghasilkan stream warna berulang tanpa henti
 - Lakukan commit hasil jawaban Soal 3 dengan pesan "W12: Jawaban Soal 3"
 
 ### Soal 4
