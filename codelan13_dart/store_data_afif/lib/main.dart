@@ -3,6 +3,7 @@ import 'dart:convert';
 import './model/pizza.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:path_provider/path_provider.dart';
+import 'dart:io';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +33,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String documentsPath = '';
   String tempPath = '';
+
+  late File myFile;
+  String fileText = '';
+
+  Future<bool> writeFile() async {
+    try {
+      await myFile.writeAsString('Margherita, Capricciosa, Napoli');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
 
   Future getPaths() async {
     final docDir = await getApplicationDocumentsDirectory();
@@ -95,13 +108,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    getPaths();
+    getPaths().then((_) {
+      myFile = File('$documentsPath/myFile.txt');
+      writeFile();
+    });
     // readAndWritePreferences();
     // readJsonFile().then((value) {
     //   setState(() {
     //     myPizzas = value;
     //   });
     // });
+  }
+
+  Future<bool> readFile() async {
+    try {
+      String fileContent = await myFile.readAsString();
+      setState(() {
+        fileText = fileContent;
+      });
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 
   @override
@@ -151,6 +179,13 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Text("Documents Path: $documentsPath"),
           Text("Temporary Path: $tempPath"),
+
+          ElevatedButton(
+            onPressed: () => readFile(),
+            child: const Text("Read File"),
+          ),
+
+          Text(fileText),
         ],
       ),
     );

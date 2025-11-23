@@ -54,7 +54,29 @@
 ## Praktikum 6
 ### Soal 8
 - Jelaskan maksud kode pada langkah 3 dan 7 !
+<br>Jawab:<br>
+    - Langkah 3:<br> Fungsi ini bersifat asynchronous dan bertugas menulis teks "Margherita, Capricciosa, Napoli" ke file pizzas.txt.
+    Jika proses berhasil, fungsi mengembalikan true, dan jika terjadi error, false.
+    - Langkah 7:<br> Ketika aplikasi mulai:
+
+        - initState() memanggil getPaths().
+
+        - Path folder aplikasi didapat dan file pizzas.txt dibuat.
+
+       - writeFile() otomatis menyimpan teks pizza ke dalam file.
+
+       - UI menampilkan:
+
+        - Lokasi dokumen
+
+        - Lokasi temporary
+
+        - Tombol Read File
+
+        - Jika tombol ditekan, readFile() membaca isi file dan menampilkan teks pizza.
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+<img src='img/prak6-8.gif'>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
 
 ## Praktikum 7
