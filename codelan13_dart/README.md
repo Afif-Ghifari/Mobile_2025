@@ -32,7 +32,11 @@
 ## Praktikum 3
 ### Soal 5
 - Jelaskan maksud kode lebih safe dan maintainable!
+<br>Jawab:<br>
+    Kode lebih safe karena struktur kode jelas dan mudah dikontrol.
+    Dan lebih maintainable karena logic dipisah, widget digunakan sesuai fungsinya, dan mudah dikembangkan jika aplikasi bertambah kompleks.
 - Capture hasil praktikum Anda dan lampirkan di README.
+<img src='img/prak3-5.png'>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 5".
 
 ## Praktikum 4
