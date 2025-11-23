@@ -42,6 +42,7 @@
 ## Praktikum 4
 ### Soal 6
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+<img src='img/prak4-6.gif'>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
 
 ## Praktikum 5
