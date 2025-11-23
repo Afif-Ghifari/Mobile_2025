@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import './model/pizza.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,27 +30,39 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int appCounter = 0;
+  String documentsPath = '';
+  String tempPath = '';
 
-  Future readAndWritePreferences() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    appCounter = prefs.getInt('appCounter') ?? 0;
-    appCounter++;
-    await prefs.setInt('appCounter', appCounter);
-
+  Future getPaths() async {
+    final docDir = await getApplicationDocumentsDirectory();
+    final tempDir = await getTemporaryDirectory();
     setState(() {
-      appCounter = appCounter;
+      documentsPath = docDir.path;
+      tempPath = tempDir.path;
     });
   }
 
-  Future deletePreferences() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.clear();
+  // int appCounter = 0;
 
-    setState(() {
-      appCounter = 0;
-    });
-  } 
+  // Future readAndWritePreferences() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   appCounter = prefs.getInt('appCounter') ?? 0;
+  //   appCounter++;
+  //   await prefs.setInt('appCounter', appCounter);
+
+  //   setState(() {
+  //     appCounter = appCounter;
+  //   });
+  // }
+
+  // Future deletePreferences() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   await prefs.clear();
+
+  //   setState(() {
+  //     appCounter = 0;
+  //   });
+  // }
 
   // String pizzaString = "";
   // List<Pizza> myPizzas = [];
@@ -82,7 +95,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    readAndWritePreferences();
+    getPaths();
+    // readAndWritePreferences();
     // readJsonFile().then((value) {
     //   setState(() {
     //     myPizzas = value;
@@ -108,21 +122,36 @@ class _MyHomePageState extends State<MyHomePage> {
     //   ),
     // );
 
+    //   return Scaffold(
+    //     appBar: AppBar(
+    //       title: const Text("Shared Preferences Afif"),
+    //       backgroundColor: Colors.green,
+    //     ),
+    //     body: Container(
+    //       child: Center(
+    //         child: Column(
+    //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //           children: [
+    //             Text("You have openend the app $appCounter times"),
+    //             ElevatedButton(onPressed: (){deletePreferences();}, child: const Text("Reset Counter"))
+    //           ],
+    //         ),
+    //       ),
+    //     ),
+    //   );
+    // }
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Shared Preferences Afif"),
-        backgroundColor: Colors.green,
+        title: const Text("Path Provider Afif"),
+        backgroundColor: Colors.blue,
       ),
-      body: Container(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text("You have openend the app $appCounter times"),
-              ElevatedButton(onPressed: (){deletePreferences();}, child: const Text("Reset Counter"))
-            ],
-          ),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text("Documents Path: $documentsPath"),
+          Text("Temporary Path: $tempPath"),
+        ],
       ),
     );
   }

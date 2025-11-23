@@ -48,6 +48,7 @@
 ## Praktikum 5
 ### Soal 7
 - Capture hasil praktikum Anda dan lampirkan di README.
+<img src='img/prak5-7.png'>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
 
 ## Praktikum 6
