@@ -26,6 +26,7 @@
 ## Praktikum 2
 ### Soal 4
 - Capture hasil running aplikasi Anda, kemudian impor ke laporan praktikum Anda!
+<img src='img/prak2-4.png'>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 4".
 
 ## Praktikum 3
